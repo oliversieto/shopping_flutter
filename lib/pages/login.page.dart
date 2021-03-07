@@ -15,7 +15,7 @@ class LoginPage extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 450,
+              height: 480,
               decoration: BoxDecoration(
                 color: Colors.white,
                 boxShadow: [
@@ -37,7 +37,7 @@ class LoginPage extends StatelessWidget {
                         Column(
                           children: [
                             Text(
-                              "Welcome,",
+                              "Welcome",
                               style: TextStyle(
                                 fontSize: 30,
                                 fontWeight: FontWeight.w500,
@@ -124,6 +124,13 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
             ),
+            Container(
+              padding: EdgeInsets.only(top: 15, bottom: 15),
+              child: Text(
+                "-- OR --",
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w300),
+              ),
+            )
           ],
         ),
       ),
