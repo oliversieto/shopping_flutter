@@ -27,6 +27,31 @@ class LoginPage extends StatelessWidget {
                   ),
                 ],
               ),
+              child: ListView(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        children: [
+                          Text(
+                            "Welcome",
+                            style: TextStyle(
+                              fontSize: 30,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          Text("Sign to continue"),
+                        ],
+                      ),
+                      TextButton(
+                        onPressed: () {},
+                        child: Text("Sing Up"),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),
