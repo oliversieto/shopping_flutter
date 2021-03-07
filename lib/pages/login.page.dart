@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopping/pages/signup.page.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -52,8 +53,20 @@ class LoginPage extends StatelessWidget {
                             ],
                           ),
                           TextButton(
-                            onPressed: () {},
-                            child: Text("Sing Up"),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => SignupPage(),
+                                ),
+                              );
+                            },
+                            child: Text(
+                              "Sing Up",
+                              style: TextStyle(
+                                color: Colors.black,
+                              ),
+                            ),
                           ),
                         ],
                       ),
