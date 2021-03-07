@@ -4,33 +4,63 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        padding: EdgeInsets.all(15),
-        color: Color(0xFFF5F5F5),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            SizedBox(
-              height: 60,
-            ),
-            search(),
-            SizedBox(
-              height: 30,
-            ),
-            Text(
-              "Categories",
-              style: TextStyle(
-                fontSize: 30,
+      body: SingleChildScrollView(
+        child: Container(
+          padding: EdgeInsets.all(15),
+          color: Color(0xFFF5F5F5),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              SizedBox(
+                height: 60,
               ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Container(
-              height: 90,
-              child: categoryList(),
-            ),
-          ],
+              search(),
+              SizedBox(
+                height: 30,
+              ),
+              Text(
+                "Categories",
+                style: TextStyle(
+                  fontSize: 30,
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                height: 90,
+                child: categoryList(),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Best Selling",
+                    style: TextStyle(fontSize: 30),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "See All",
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                height: 350,
+                child: productList(),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -115,5 +145,73 @@ Widget categoryItem() {
       ),
     ),
     child: Image.asset("assets/images/Icon_Devices.png"),
+  );
+}
+
+Widget productList() {
+  return Container(
+    child: ListView(
+      scrollDirection: Axis.horizontal,
+      children: [
+        productItem(),
+        productItem(),
+        productItem(),
+        productItem(),
+        productItem(),
+        productItem(),
+        productItem(),
+      ],
+    ),
+  );
+}
+
+Widget productItem() {
+  return Container(
+    width: 170,
+    margin: EdgeInsets.all(10),
+    padding: EdgeInsets.all(5),
+    color: Colors.black12,
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Image.asset(
+          "assets/images/product-1.png",
+          width: 170,
+          height: 170,
+          fit: BoxFit.cover,
+        ),
+        Container(
+          height: 60,
+          child: Text(
+            "Product Title",
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w300,
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 5,
+        ),
+        Text(
+          "Brand",
+          style: TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.w300,
+          ),
+        ),
+        SizedBox(
+          height: 5,
+        ),
+        Text(
+          "\$ 200",
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            color: Color(0xFF00C569),
+          ),
+        ),
+      ],
+    ),
   );
 }
