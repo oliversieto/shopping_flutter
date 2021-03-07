@@ -52,6 +52,9 @@ class LoginPage extends StatelessWidget {
                         ),
                       ],
                     ),
+                    SizedBox(
+                      height: 60,
+                    ),
                     TextFormField(
                       // autofocus: true,
                       keyboardType: TextInputType.emailAddress,
@@ -66,6 +69,9 @@ class LoginPage extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 20,
                       ),
+                    ),
+                    SizedBox(
+                      height: 10,
                     ),
                     TextFormField(
                       // autofocus: true,
@@ -83,6 +89,37 @@ class LoginPage extends StatelessWidget {
                         fontSize: 20,
                       ),
                     ),
+                    Container(
+                      height: 40,
+                      alignment: Alignment.centerRight,
+                      child: TextButton(
+                        child: Text(
+                          "Forgot your password?",
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
+                        onPressed: () {},
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(5),
+                        ),
+                      ),
+                      child: TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          "Sign in",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                    )
                   ],
                 ),
               ),
