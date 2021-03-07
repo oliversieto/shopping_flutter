@@ -27,30 +27,64 @@ class LoginPage extends StatelessWidget {
                   ),
                 ],
               ),
-              child: ListView(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        children: [
-                          Text(
-                            "Welcome",
-                            style: TextStyle(
-                              fontSize: 30,
-                              fontWeight: FontWeight.w500,
+              child: Padding(
+                padding: const EdgeInsets.all(15),
+                child: ListView(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          children: [
+                            Text(
+                              "Welcome,",
+                              style: TextStyle(
+                                fontSize: 30,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
-                          ),
-                          Text("Sign to continue"),
-                        ],
+                            Text("Sign to continue"),
+                          ],
+                        ),
+                        TextButton(
+                          onPressed: () {},
+                          child: Text("Sing Up"),
+                        ),
+                      ],
+                    ),
+                    TextFormField(
+                      // autofocus: true,
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(
+                        labelText: "Email",
+                        labelStyle: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 16,
+                        ),
                       ),
-                      TextButton(
-                        onPressed: () {},
-                        child: Text("Sing Up"),
+                      style: TextStyle(
+                        fontSize: 20,
                       ),
-                    ],
-                  ),
-                ],
+                    ),
+                    TextFormField(
+                      // autofocus: true,
+                      keyboardType: TextInputType.text,
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        labelText: "Password",
+                        labelStyle: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 16,
+                        ),
+                      ),
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
