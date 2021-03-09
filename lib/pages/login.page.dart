@@ -133,14 +133,7 @@ class LoginPage extends StatelessWidget {
                           ),
                         ),
                         child: TextButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => HomePage(),
-                              ),
-                            );
-                          },
+                          onPressed: () {},
                           child: Text(
                             "Sign in",
                             style: TextStyle(color: Colors.white),
