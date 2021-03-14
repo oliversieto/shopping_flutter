@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shopping/pages/home.page.dart';
 import 'package:shopping/pages/signup.page.dart';
 
 class LoginPage extends StatelessWidget {
@@ -8,7 +7,6 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          color: Color(0xFFF5F5F5),
           padding: EdgeInsets.only(
             top: 80,
             left: 20,
@@ -20,7 +18,7 @@ class LoginPage extends StatelessWidget {
               Container(
                 height: 450,
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Theme.of(context).accentColor,
                   boxShadow: [
                     new BoxShadow(
                       color: Colors.black12,
@@ -45,12 +43,12 @@ class LoginPage extends StatelessWidget {
                             children: [
                               Text(
                                 "Welcome",
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  fontWeight: FontWeight.w500,
-                                ),
+                                style: Theme.of(context).textTheme.headline4,
                               ),
-                              Text("Sign to continue"),
+                              Text(
+                                "Sign to continue",
+                                style: Theme.of(context).textTheme.subtitle2,
+                              ),
                             ],
                           ),
                           TextButton(
@@ -65,7 +63,7 @@ class LoginPage extends StatelessWidget {
                             child: Text(
                               "Sing Up",
                               style: TextStyle(
-                                color: Colors.black,
+                                color: Theme.of(context).primaryColor,
                               ),
                             ),
                           ),
@@ -80,7 +78,7 @@ class LoginPage extends StatelessWidget {
                         decoration: InputDecoration(
                           labelText: "Email",
                           labelStyle: TextStyle(
-                            color: Colors.black,
+                            color: Theme.of(context).primaryColor,
                             fontWeight: FontWeight.w400,
                             fontSize: 16,
                           ),
@@ -99,7 +97,7 @@ class LoginPage extends StatelessWidget {
                         decoration: InputDecoration(
                           labelText: "Password",
                           labelStyle: TextStyle(
-                            color: Colors.black,
+                            color: Theme.of(context).primaryColor,
                             fontWeight: FontWeight.w400,
                             fontSize: 16,
                           ),
@@ -115,7 +113,7 @@ class LoginPage extends StatelessWidget {
                           child: Text(
                             "Forgot your password?",
                             style: TextStyle(
-                              color: Colors.black,
+                              color: Theme.of(context).primaryColor,
                             ),
                           ),
                           onPressed: () {},
@@ -127,7 +125,7 @@ class LoginPage extends StatelessWidget {
                       Container(
                         width: double.infinity,
                         decoration: BoxDecoration(
-                          color: Colors.blue,
+                          color: Theme.of(context).primaryColor,
                           borderRadius: BorderRadius.all(
                             Radius.circular(5),
                           ),
@@ -157,7 +155,7 @@ class LoginPage extends StatelessWidget {
                 decoration: BoxDecoration(
                   border: Border.all(
                     width: 2.0,
-                    color: Colors.blue,
+                    color: Theme.of(context).primaryColor,
                   ),
                   borderRadius: BorderRadius.all(
                     Radius.circular(5),
@@ -173,7 +171,12 @@ class LoginPage extends StatelessWidget {
                           "assets/images/facebook.png",
                         ),
                       ),
-                      Text("Sign In with Facebook"),
+                      Text(
+                        "Sign In with Facebook",
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
                     ],
                   ),
                   onPressed: () {},
@@ -188,7 +191,7 @@ class LoginPage extends StatelessWidget {
                 decoration: BoxDecoration(
                   border: Border.all(
                     width: 2.0,
-                    color: Colors.blue,
+                    color: Theme.of(context).primaryColor,
                   ),
                   borderRadius: BorderRadius.all(
                     Radius.circular(5),
@@ -204,7 +207,12 @@ class LoginPage extends StatelessWidget {
                           "assets/images/google.png",
                         ),
                       ),
-                      Text("Sign In with Google"),
+                      Text(
+                        "Sign In with Google",
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
                     ],
                   ),
                   onPressed: () {},
